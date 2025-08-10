@@ -30,29 +30,35 @@ header {
   width: 80%;
   height: 4px;
   background-color: #9f4265;
+
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: lineGrow 1s ease-out forwards;
 }
+
+@keyframes lineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
 
 /* 駅ボタン */
 .station-btn {
-  position: relative;
   display: inline-block;
-  width: 80px;
-  height: 80px;
   margin: 0 60px;
-  background-color: #9f4265;
-  color: white;
-  border-radius: 50%;
-  line-height: 80px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-/* ホバーアニメーション */
+.station-btn img {
+  width: 80px;
+  height: 80px;
+}
+
 .station-btn:hover {
   transform: scale(1.15);
-  background-color: #b7557a;
 }
+
 
 /* フッター */
 footer {
@@ -60,3 +66,4 @@ footer {
   padding: 1rem;
   background-color: #eee;
 }
+
